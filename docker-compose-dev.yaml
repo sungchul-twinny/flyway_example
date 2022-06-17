@@ -1,0 +1,18 @@
+version: "3.7"
+
+services:
+  mysql-example:
+    image: mysql:8.0
+    volumes:
+      - tw-database-80-dev:/var/lib/mysql
+    ports:
+      - "3306:3306"
+    cap_add:
+      - SYS_NICE
+
+    environment:
+      MYSQL_ROOT_PASSWORD: BIMklMXcTU5
+      MYSQL_DATABASE: example
+
+volumes:
+  tw-database-80-dev:
